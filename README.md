@@ -1,2 +1,2 @@
-# oracle-chain2
+# oraclechain
 Sandbox to intake band protocol's oracle module

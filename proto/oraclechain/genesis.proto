@@ -1,0 +1,14 @@
+syntax = "proto3";
+package tak1827.oraclechain.oraclechain;
+
+import "gogoproto/gogo.proto";
+import "oraclechain/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/tak1827/oraclechain/x/oraclechain/types";
+
+// GenesisState defines the oraclechain module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
