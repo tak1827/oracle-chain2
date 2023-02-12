@@ -3,7 +3,7 @@ module github.com/tak1827/oraclechain
 go 1.19
 
 require (
-	github.com/bandprotocol/chain/v2 v2.4.0-rc1
+	github.com/bandprotocol/chain/v2 v2.4.0
 	github.com/bandprotocol/go-owasm v0.2.2
 	github.com/cosmos/cosmos-sdk v0.45.10
 	github.com/cosmos/ibc-go/v3 v3.3.1
