@@ -18,6 +18,8 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtypes "github.com/tendermint/tendermint/types"
+
+	"github.com/bandprotocol/chain/v2/app/params"
 )
 
 func init() {
@@ -72,7 +74,7 @@ func BenchmarkSimulation(b *testing.B) {
 		require.NoError(b, err)
 	})
 
-	encoding := cosmoscmd.MakeEncodingConfig(app.ModuleBasics)
+	encoding := params.MakeEncodingConfig()
 
 	app := app.New(
 		logger,
@@ -84,6 +86,7 @@ func BenchmarkSimulation(b *testing.B) {
 		0,
 		encoding,
 		simapp.EmptyAppOptions{},
+		4096,
 	)
 
 	simApp, ok := app.(SimApp)
